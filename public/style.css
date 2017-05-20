@@ -26,6 +26,11 @@ nav ul {
   justify-content: space-around;*/
 }
 
+#subtotal {
+  position:fixed;
+  right:0;
+  top:70vh;
+}
 nav ul li {
   /*padding:0 15px 0 15px;*/
   /*list-style: none;*/
@@ -33,7 +38,7 @@ nav ul li {
   /*line-height: 1.6;*/
   /*font-size:1.5em;*/
   /*font-weight:bold;*/
-  color: green;
+  color: navy;
 }
 
 nav ul li a {
