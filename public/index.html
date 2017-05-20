@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>myMenu App</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container nav-wrapper">
+                <a href="#" class="brand-logo">Menu App</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Account</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section ng-app="myMenu">
+
+        <div ng-controller="mainCtrl" class="container main">
+            <div class="row">
+                <div class="col s12">
+                    <h2>Today's Menu</h2>
+                    <!--
+              <input type="text" ng-model="inputItemName" placeholder="Add New Item">
+              <input type="text" ng-model="inputDescription" placeholder="Add New Description">
+              <input type="text" ng-model="inputPrice" placeholder="Insert Price">
+
+              <button type="button" ng-click="addItem()">Add Food Item</button> -->
+
+                    <div class="item-container">
+                        <form class="col s12">
+                            <table>
+                                <!-- <tr>
+                                    <th>Food</th>
+                                    <th>Price</th>
+                                </tr> -->
+                                <tr ng-repeat="item in food">
+                                    <td>
+                                        <li>
+                                            <h5>{{item.food_name}}</strong></h5>
+                                            <p><em ng-if="item.food_description != null">{{item.food_description}}...</em>
+                                                <span class="price-line">${{item.food_price}}</span>
+                                        </li>
+                                    </td>
+                                    <td>
+                                      <label>Qty</label>
+                                        <select class="browser-default">
+                                          <option value="" disabled selected>Qty</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <p>Home | About | Advertise</p>
+        <p>myMenu, 2017.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/mainSrv.js" charset="utf-8"></script>
+</body>
+
+</html>
